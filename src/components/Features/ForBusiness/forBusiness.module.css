@@ -1,0 +1,317 @@
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 72px 32px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+
+  background: #0f1324;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Content */
+
+.content {
+  width: 100%;
+  min-width: 0;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 6px 11px;
+
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 30px;
+  background: #171c30;
+
+  color: #a5a0ff;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.content h2 {
+  margin: 0 0 20px;
+
+  color: #f8fafc;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -1.1px;
+}
+
+.content > p {
+  margin: 0 0 18px;
+
+  color: #b5bdcf;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Order card */
+
+.orderCard {
+  margin-top: 22px;
+  padding: 16px 14px;
+
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 13px;
+  background: #171c30;
+}
+
+.orderHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.storeName {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.orderHeader h3 {
+  margin: 0;
+
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.price {
+  flex-shrink: 0;
+  margin-top: 18px;
+
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.orderDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 12px 0;
+  color: #aab3c6;
+  font-size: 10px;
+}
+
+.paid {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #34d399;
+}
+
+.paid span {
+  width: 13px;
+  height: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #34d399;
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+.deliveryInstructions {
+  padding: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: 8px;
+  background: #101426;
+}
+
+.deliveryInstructions > span {
+  color: #929bb1;
+  font-size: 10px;
+}
+
+.deliveryInstructions p {
+  margin: 5px 0 0;
+  color: #b5bdcf;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.dispatch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding-top: 13px;
+  font-size: 10px;
+}
+
+.dispatchStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #67d8f5;
+}
+
+.waybill {
+  color: #929bb1;
+}
+
+/* Business image */
+
+.visual {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 15px;
+  background: #171c30;
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.businessImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.25 / 1;
+  object-fit: cover;
+}
+
+.imageFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 15px;
+}
+
+.imageFooter h3 {
+  margin: 0 0 5px;
+  color: #dbe2f0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.imageFooter p {
+  margin: 0;
+  color: #929bb1;
+  font-size: 10px;
+}
+
+.confirmed {
+  flex-shrink: 0;
+  padding: 6px 9px;
+
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 5px;
+  background: rgba(79, 70, 229, 0.12);
+
+  color: #a5a0ff;
+  font-size: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .section {
+    gap: 28px;
+    padding: 56px 24px;
+  }
+
+  .content h2 {
+    font-size: 29px;
+  }
+
+  .orderDetails {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 44px 20px;
+  }
+
+  .content {
+    max-width: none;
+  }
+
+  .content h2 {
+    font-size: clamp(27px, 7vw, 34px);
+    letter-spacing: -0.7px;
+  }
+
+  .content > p {
+    font-size: 13px;
+  }
+
+  .visual {
+    order: 1;
+  }
+
+  .imageFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .confirmed {
+    align-self: flex-start;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 380px) {
+  .section {
+    padding: 36px 16px;
+  }
+
+  .orderCard {
+    padding: 12px 10px;
+  }
+
+  .orderHeader {
+    gap: 8px;
+  }
+
+  .orderHeader h3 {
+    font-size: 11px;
+  }
+
+  .price {
+    font-size: 11px;
+  }
+
+  .dispatch {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

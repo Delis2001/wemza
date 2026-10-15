@@ -1,0 +1,169 @@
+.sharedCard {
+  min-height: 0;
+  padding: 32px 36px;
+  box-sizing: border-box;
+}
+
+.sharedCard > div {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Main content: text on the left, information panel on the right */
+.cardFooter {
+  width: 100%;
+  min-width: 0;
+  margin-top: -176px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+
+  pointer-events: none;
+}
+
+/* Checklist stays below the description on the left */
+.checklist {
+  position: absolute;
+  left: 36px;
+  bottom: 32px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+
+  pointer-events: auto;
+}
+
+.checklist > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #b9c2d3;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.check {
+  flex-shrink: 0;
+  color: #34d399;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Information panel */
+.infoPanel {
+  position: relative;
+  flex: 0 0 312px;
+  width: 312px;
+  min-height: 180px;
+  box-sizing: border-box;
+  padding: 20px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 15px;
+  background: #101426;
+
+  text-align: center;
+  pointer-events: auto;
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #202a40;
+}
+
+.infoIcon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.infoPanel h3 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.infoPanel p {
+  max-width: 240px;
+  margin: 0;
+  color: #929bb1;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .sharedCard {
+    padding: 28px 26px;
+  }
+
+  .cardFooter {
+    margin-top: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    pointer-events: auto;
+  }
+
+  .checklist {
+    position: static;
+  }
+
+  .infoPanel {
+    width: 100%;
+    min-height: 160px;
+    flex-basis: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .sharedCard {
+    padding: 24px 20px;
+  }
+
+  .cardFooter {
+    margin-top: 22px;
+    gap: 20px;
+  }
+
+  .checklist {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .checklist > span {
+    font-size: 11px;
+  }
+
+  .infoPanel {
+    padding: 22px 20px;
+  }
+
+  .infoPanel p {
+    max-width: 260px;
+  }
+}

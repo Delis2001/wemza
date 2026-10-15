@@ -1,0 +1,232 @@
+.downloadCard {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 252px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  align-items: center;
+  column-gap: 48px;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 22px;
+  background: #171c30;
+  color: #f8fafc;
+}
+
+/* Left column */
+.downloadText {
+  min-width: 0;
+}
+
+.downloadText h2 {
+  max-width: 480px;
+  margin: 0 0 12px;
+
+  color: #f8fafc;
+  font-size: 29px;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+}
+
+.downloadText p {
+  max-width: 470px;
+  margin: 0;
+
+  color: #b5bdcf;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Store buttons */
+.downloadButtons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.storeButton {
+  min-height: 38px;
+  padding: 0 17px;
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 10px;
+
+  color: #f8fafc;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.storeButton:hover {
+  transform: translateY(-2px);
+}
+
+.storeButton img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.appleButton {
+  border-color: transparent;
+  background: #5845ed;
+}
+
+.appleButton:hover {
+  background: #6655fa;
+}
+
+.playButton {
+  background: #101426;
+}
+
+.playButton:hover {
+  background: #20283d;
+}
+
+/* QR panel on the right */
+.qrPanel {
+  width: 140px;
+  min-height: 162px;
+  padding: 14px 12px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 15px;
+  background: #101426;
+
+  text-align: center;
+}
+
+.qrImage {
+  width: 92px;
+  height: 92px;
+  padding: 6px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border-radius: 10px;
+  background: #fff;
+}
+
+.qrImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qrPanel h3 {
+  margin: 0 0 5px;
+  color: #f8fafc;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.qrPanel p {
+  margin: 0;
+  color: #929bb1;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .downloadCard {
+    min-height: 0;
+    padding: 30px 26px;
+    grid-template-columns: minmax(0, 1fr) 125px;
+    column-gap: 24px;
+  }
+
+  .downloadText h2 {
+    font-size: 25px;
+  }
+
+  .qrPanel {
+    width: 125px;
+  }
+
+  .storeButton {
+    padding: 0 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .downloadCard {
+    padding: 26px 20px;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+    border-radius: 18px;
+  }
+
+  .downloadText h2 {
+    font-size: 23px;
+    line-height: 1.25;
+  }
+
+  .downloadText p {
+    font-size: 13px;
+  }
+
+  .downloadButtons {
+    gap: 8px;
+  }
+
+  .storeButton {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .qrPanel {
+    width: 100%;
+    min-height: 150px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .downloadButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .storeButton {
+    width: 100%;
+    flex: auto;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .storeButton,
+  .storeButton:hover {
+    transition: none;
+    transform: none;
+  }
+}
